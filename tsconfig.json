@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": false,
+    "outDir": "./dist",
+    "lib": ["es6"]
+  },
+  "exclude": ["node_modules", "dist"],
+  "files": ["src/index.ts"]
+}
