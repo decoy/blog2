@@ -1,38 +1,40 @@
-function getContentFiles(path: string) {
-  // just loads up all the possible files
-}
-
-function parseFrontMatter(file: string) {
-  // just pulls that top level token (probably just use a fancy 'end' string for now.  use the open/close strings)
-}
-
-// get files
-// parse headers
-// build out happy hook files to do the rest...
-
-export interface FrontMatter {
+export interface PostMeta {
   title?: string;
   date?: string;
   blurb?: string;
 }
 
-export interface PageStuff {
+export interface Post {
   path: string;
-  front: FrontMatter;
+  meta: PostMeta;
   content: string;
 }
 
 export interface Site {
-  posts: string[];
+  config: {
+    author: string;
+    title: string;
+    root: string;
+    description: string;
+    favicon: string;
+    rss: string;
+  };
+  tags: string[];
+  posts: Post[];
 }
 
 import { resolve } from 'path';
-import { promises } from 'fs';
-import { body, layout } from './theme';
+import { promises, writeFile } from 'fs';
+import { layout } from './theme';
 import * as Markdown from 'markdown-it';
 
 const md = new Markdown();
 
+/**
+ * Gets all files recursively in a folder
+ *
+ * @param dir the path to search
+ */
 export async function* getFiles(dir: string): AsyncIterable<string> {
   const dirents = await promises.readdir(dir, { withFileTypes: true });
   for (const dirent of dirents) {
@@ -45,34 +47,55 @@ export async function* getFiles(dir: string): AsyncIterable<string> {
   }
 }
 
-export async function loadFile(file: string) {
-  const data = await promises.readFile(file, 'utf8');
-  // TODO parse out the header info if there is any
-  return {
-    data,
+export async function loadMarkdownFile(path: string): Promise<Post> {
+  const data = await promises.readFile(path, 'utf8');
+  const tokens = md.parse(data, {});
+  const doc = {
+    path,
+    meta: {},
+    content: '',
   };
+  // loads the json front matter
+  if (tokens[0] && tokens[0].type == 'fence' && tokens[0].info == 'json') {
+    const front = tokens.shift(); // remove it
+    doc.meta = JSON.parse(front!.content);
+  }
+  doc.content = md.renderer.render(tokens, {}, {});
+  return doc;
 }
 
-(async () => {
+export async function loadSite(dir: string) {
+  console.log(dir);
   const config = {
     posts: './contents/posts',
   };
 
-  const t = await getFiles(config.posts);
-  for await (const f of getFiles(config.posts)) {
-    console.log(f);
-    const data = await loadFile(f);
-    const tokens = md.parse(data.data, {});
+  const site: Site = {
+    config: {
+      author: 'Kel Piffner',
+      title: "Hi, I'm Kel",
+      root: '/',
+      description: '',
+      favicon: '',
+      rss: '',
+    },
+    tags: ['tag1', 'tag2'],
+    posts: [],
+  };
 
-    if (tokens[0] && tokens[0].type == 'fence' && tokens[0].info == 'json') {
-      const front = tokens.shift();
-      const header = JSON.parse(front!.content);
-      console.log(header);
-    }
-    const test = md.renderer.render(tokens, {}, {});
-    console.log(test);
-    console.log(layout({ front: { title: 'titletitels', blurb: 'blurble' } } as any));
+  const files = await getFiles(config.posts);
+  for await (const f of files) {
+    const doc = await loadMarkdownFile(f);
+    site.posts.push(doc);
   }
-})();
+  return site;
+}
+
+loadSite(__dirname).then(async (s) => {
+  for (let p of s.posts) {
+    const page = layout(p, s);
+    await promises.writeFile('./dist/index.html', page);
+  }
+});
 
 // sitemap, feed, whatever.

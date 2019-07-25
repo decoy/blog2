@@ -32,7 +32,7 @@ export function html(literalSections: TemplateStringsArray, ...substs: any[]) {
   // produces one literal section, an empty string)
   result += raw[raw.length - 1]; // (A)
 
-  return result;
+  return result.trim();
 }
 
 function htmlEscape(str: string) {

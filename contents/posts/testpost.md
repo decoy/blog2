@@ -1,10 +1,8 @@
 ```json
 {
-  "some": "frontmatter",
-  "test": "test",
-  "test": {
-    "dadta": "morestuff"
-  }
+  "title": "Testing Post",
+  "date": "2019.01.01",
+  "blurb": "this is a blurb of random stuffffffffs"
 }
 ```
 
