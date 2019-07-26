@@ -1,3 +1,6 @@
+import { resolve } from 'path';
+import { promises } from 'fs';
+
 // https://2ality.com/2015/01/template-strings-html.html
 export function html(literalSections: TemplateStringsArray, ...substs: any[]) {
   // Use raw literal sections: we don’t want
@@ -43,4 +46,21 @@ function htmlEscape(str: string) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
     .replace(/`/g, '&#96;');
+}
+
+/**
+ * Gets all files recursively in a folder
+ *
+ * @param dir the path to search
+ */
+export async function* getFiles(dir: string): AsyncIterable<string> {
+  const dirents = await promises.readdir(dir, { withFileTypes: true });
+  for (const dirent of dirents) {
+    const res = resolve(dir, dirent.name);
+    if (dirent.isDirectory()) {
+      yield* getFiles(res);
+    } else {
+      yield res;
+    }
+  }
 }

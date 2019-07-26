@@ -10,12 +10,10 @@
     "tests"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "ts-node src/index.ts",
+    "build-css": "node-sass ./src/theme/styles/index.scss -o ./dist",
     "watch": "nodemon",
-    "test": "jest",
-    "version": "tsc",
-    "release": "np",
-    "run": "ts-node src/index.ts"
+    "watch-css": "node-sass ./src/theme/styles/index.scss -o ./dist -w"
   },
   "repository": {
     "type": "git",
@@ -27,18 +25,11 @@
     "url": "https://github.com/decoy/mxbuildy/issues"
   },
   "homepage": "https://github.com/decoy/mxbuildy#readme",
-  "publishConfig": {
-    "access": "public",
-    "tag": "next"
-  },
   "devDependencies": {
-    "@types/jest": "^24.0.15",
     "@types/markdown-it": "0.0.8",
     "@types/node": "^12.6.8",
-    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
-    "np": "^4.0.2",
-    "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },

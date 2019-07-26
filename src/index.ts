@@ -23,29 +23,12 @@ export interface Site {
   posts: Post[];
 }
 
-import { resolve } from 'path';
-import { promises, writeFile } from 'fs';
-import { layout } from './theme';
+import { promises } from 'fs';
+import { layout } from './theme/layout';
 import * as Markdown from 'markdown-it';
+import { getFiles } from './util';
 
 const md = new Markdown();
-
-/**
- * Gets all files recursively in a folder
- *
- * @param dir the path to search
- */
-export async function* getFiles(dir: string): AsyncIterable<string> {
-  const dirents = await promises.readdir(dir, { withFileTypes: true });
-  for (const dirent of dirents) {
-    const res = resolve(dir, dirent.name);
-    if (dirent.isDirectory()) {
-      yield* getFiles(res);
-    } else {
-      yield res;
-    }
-  }
-}
 
 export async function loadMarkdownFile(path: string): Promise<Post> {
   const data = await promises.readFile(path, 'utf8');
@@ -62,6 +45,16 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
   }
   doc.content = md.renderer.render(tokens, {}, {});
   return doc;
+}
+
+async function loadPosts(dir: string) {
+  const files = await getFiles(dir);
+  const posts = [];
+  for await (const f of files) {
+    const doc = await loadMarkdownFile(f);
+    posts.push(doc);
+  }
+  return posts;
 }
 
 export async function loadSite(dir: string) {
@@ -83,19 +76,14 @@ export async function loadSite(dir: string) {
     posts: [],
   };
 
-  const files = await getFiles(config.posts);
-  for await (const f of files) {
-    const doc = await loadMarkdownFile(f);
-    site.posts.push(doc);
-  }
+  site.posts = await loadPosts(config.posts);
+
   return site;
 }
 
 loadSite(__dirname).then(async (s) => {
+  const page = layout(s);
+  await promises.writeFile('./dist/index.html', page);
   for (let p of s.posts) {
-    const page = layout(p, s);
-    await promises.writeFile('./dist/index.html', page);
   }
 });
-
-// sitemap, feed, whatever.

@@ -1,7 +1,5 @@
-import { html } from '../util';
-import { Post, Site } from '../';
-
-// the main page of the theme
+import { html } from '../../util';
+import { Post, Site } from '../..';
 
 export const head = (site: Site, page?: Post) => {
   const title = page && page.meta.title ? page.meta.title : site.config.title;
@@ -18,15 +16,16 @@ export const head = (site: Site, page?: Post) => {
       </title>
       <link rel="alternative" href="${site.config.rss}" title="${site.config.title}" type="application/atom+xml" />
       <link rel="icon" href="${site.config.favicon}" />
-      <link rel="stylesheet" href="${site.config.root}css/index.css" type="text/css" />
+      <!-- <link rel="stylesheet" href="${site.config.root}index.css" type="text/css" /> -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css" /> -->
     </head>
   `;
 };
 
 export const nav = () => html`
-  <header class="dotted-bottom">
+  <header class="ba bl-0 br-0 bt-0 b--dashed b--black-30">
     <nav>
-      <ul>
+      <ul class="list-reset">
         <li><a href="#">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#blog">blog</a></li>
@@ -38,8 +37,8 @@ export const nav = () => html`
 `;
 
 export const hero = () => html`
-  <section class="row hero dotted-bottom">
-    <p class="center title">Hi, I'm Kel.</p>
+  <section class="mw5 mw7-ns center tc">
+    <h1 class="f1 f-headline-1 courier blue">Hi, I'm Kel.</h1>
   </section>
 `;
 
@@ -109,12 +108,12 @@ export const blog = (site: Site) => html`
   </div>
 `;
 
-export function layout(post: Post, site: Site) {
+export function layout(site: Site) {
   return html`
     <!DOCTYPE html>
     <html>
       ${head(site)}
-      <body>
+      <body class="w-100 helvetica bg-white">
         ${nav()}
         <main>
           ${hero()} ${about()} ${blog(site)}
