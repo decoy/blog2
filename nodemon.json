@@ -1,6 +1,6 @@
 {
-  "watch": ["src", "contents"],
-  "ext": "ts",
+  "watch": ["src/", "contents/"],
+  "ext": "ts md",
   "verbose": true,
-  "exec": "ts-node ./src/index.ts"
+  "exec": "ts-node src/index.ts"
 }

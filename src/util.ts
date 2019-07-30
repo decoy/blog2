@@ -64,3 +64,7 @@ export async function* getFiles(dir: string): AsyncIterable<string> {
     }
   }
 }
+
+export async function createDir(dir: string) {
+  await promises.mkdir(dir, { recursive: true });
+}
