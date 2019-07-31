@@ -5,7 +5,6 @@ export interface Config {
 
   root: string;
   url: string;
-  favicon: string;
   rss: string;
 
   outputDir: string;
@@ -21,7 +20,6 @@ export const config: Config = {
 
   root: '/',
   url: 'https://kellen.piffner.com/',
-  favicon: '',
   rss: 'atom.xml',
 
   postFiles: './contents/posts/',

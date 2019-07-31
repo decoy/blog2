@@ -4,6 +4,7 @@ import Post from './layout/post';
 import Feed from './layout/feed';
 import Tags from './layout/tags';
 import Archive from './layout/archive';
+import Sitemap from './layout/sitemap';
 import { promises } from 'fs';
 import { join, dirname } from 'path';
 import { createDir, copyFiles } from '../util';
@@ -12,9 +13,13 @@ export default async function run(site: Site) {
   createDir(site.config.outputDir);
   await index(site);
   await posts(site);
-  await feed(site);
+
   await tags(site);
   await archive(site);
+
+  await feed(site);
+  await sitemap(site);
+
   await staticFiles(site);
 }
 
@@ -38,6 +43,11 @@ async function posts(site: Site) {
 async function feed(site: Site) {
   const content = Feed(site);
   await promises.writeFile(join(site.config.outputDir, site.config.rss), content);
+}
+
+async function sitemap(site: Site) {
+  const content = Sitemap(site);
+  await promises.writeFile(join(site.config.outputDir, 'sitemap.xml'), content);
 }
 
 async function tags(site: Site) {

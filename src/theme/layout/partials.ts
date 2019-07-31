@@ -36,7 +36,7 @@ export function head(site: Site, page?: Post) {
         title="${site.config.title}"
         type="application/atom+xml"
       />
-      <link rel="icon" href="${site.config.favicon}" />
+      <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="${site.config.root}index.css" type="text/css" />
     </head>
   `;
