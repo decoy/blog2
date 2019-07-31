@@ -6,11 +6,11 @@ export function nav(site: Site, page?: Post) {
     <header class="">
       <nav>
         <ul class="">
-          <li><a href="#">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#blog">blog</a></li>
-          <li><a href="#podcast">podcast</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="${site.config.root}#">home</a></li>
+          <li><a href="${site.config.root}#about">about</a></li>
+          <li><a href="${site.config.root}#blog">blog</a></li>
+          <li><a href="${site.config.root}#podcast">podcast</a></li>
+          <li><a href="${site.config.root}#contact">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -34,5 +34,22 @@ export function head(site: Site, page?: Post) {
       <link rel="icon" href="${site.config.favicon}" />
       <link rel="stylesheet" href="${site.config.root}index.css" type="text/css" />
     </head>
+  `;
+}
+
+export function articleMini(post: Post, site: Site) {
+  return html`
+    <article class="article-mini">
+      <header>
+        <h2>${post.meta.title}</h2>
+        <time class="article-date">${post.meta.date}</time>
+      </header>
+      <p>
+        ${post.meta.blurb}
+      </p>
+      <footer>
+        <a href="${site.config.root + post.link}">Read more</a>
+      </footer>
+    </article>
   `;
 }

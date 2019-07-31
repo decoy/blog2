@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, relative, join, dirname } from 'path';
 import { promises } from 'fs';
 
 // https://2ality.com/2015/01/template-strings-html.html
@@ -62,6 +62,17 @@ export async function* getFiles(dir: string): AsyncIterable<string> {
     } else {
       yield res;
     }
+  }
+}
+
+export async function copyFiles(dir: string, outdir: string) {
+  const files = getFiles(dir);
+  for await (let f of files) {
+    const rel = relative(dir, f);
+    const path = resolve(join(outdir, rel));
+    const rdir = dirname(path);
+    await createDir(rdir);
+    await promises.copyFile(f, path);
   }
 }
 

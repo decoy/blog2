@@ -1,13 +1,18 @@
 import { Site } from '../';
 import Main from './layout/main';
 import Post from './layout/post';
+import Feed from './layout/feed';
+import Tags from './layout/tags';
 import { promises } from 'fs';
 import { join, dirname } from 'path';
-import { createDir } from '../util';
+import { createDir, copyFiles } from '../util';
 
 export default async function run(site: Site) {
   await index(site);
   await posts(site);
+  await feed(site);
+  await tags(site);
+  await staticFiles(site);
 }
 
 async function index(site: Site) {
@@ -27,4 +32,22 @@ async function posts(site: Site) {
     });
     console.log(path);
   }
+}
+
+async function feed(site: Site) {
+  const content = Feed(site);
+  await promises.writeFile(join(site.config.output, 'atom.xml'), content);
+}
+
+async function tags(site: Site) {
+  for (let t of Object.keys(site.tags)) {
+    const content = Tags(site, t);
+    const path = join(site.config.output, 'tags', t.toLowerCase());
+    await createDir(path);
+    await promises.writeFile(join(path, 'index.html'), content);
+  }
+}
+
+async function staticFiles(site: Site) {
+  await copyFiles(site.config.staticFiles, site.config.output);
 }

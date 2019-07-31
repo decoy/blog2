@@ -23,10 +23,12 @@ export interface Site {
     author: string;
     title: string;
     root: string;
+    url: string;
     output: string;
     description: string;
     favicon: string;
     rss: string;
+    staticFiles: string;
   };
   tags: { [tag: string]: number };
   posts: Post[];
@@ -93,10 +95,12 @@ export async function loadSite(dir: string) {
       author: 'Kel Piffner',
       title: "Hi, I'm Kel",
       root: '/',
+      url: 'https://kellen.piffner.com/',
       description: '',
       favicon: '',
       rss: '',
       output: './dist',
+      staticFiles: './static/',
     },
     tags: {},
     posts: [],
