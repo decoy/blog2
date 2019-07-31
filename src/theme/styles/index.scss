@@ -1,6 +1,7 @@
 $white: #ffffff;
 $black: #130307;
-$gray: #7e7e7e;
+$gray: #c6c6c6;
+$gray-darker: #7e7e7e;
 $blue: #009ce2;
 $orange: #ff861d;
 $yellow: #fe6;
@@ -22,12 +23,37 @@ body {
   font-family: $primary-font;
   color: $black;
   line-height: $font-height;
+  font-size: 100%;
 }
 
-.f-1 {
-  font-size: 5em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.f4 {
+  font-size: 1.125rem;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clear-after::after {
+  content: ' ';
+  display: block;
+  clear: both;
 }
 
 @import '_normalize.scss';
 @import '_grid.scss';
+@import '_forms.scss';
 @import '_components.scss';
+@import '_colors.scss';

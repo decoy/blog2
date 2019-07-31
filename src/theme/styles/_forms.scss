@@ -1,0 +1,62 @@
+/* form styles */
+
+label > * {
+  display: inline;
+}
+
+form > * {
+  display: block;
+}
+
+textarea,
+input,
+select,
+button {
+  border: 1px solid $black;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+textarea,
+input[type='text'] {
+  -webkit-appearance: none;
+  /* make iOS inputs pretty */
+  width: 100%;
+  outline: 0;
+}
+
+input,
+textarea {
+  display: block;
+  font-size: 1em;
+  font-family: $primary-font;
+  margin: 1em 0;
+  width: 100%;
+  background: $white;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $white;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+.controls {
+  float: right;
+}

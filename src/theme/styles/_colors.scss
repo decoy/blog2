@@ -1,0 +1,84 @@
+::selection {
+  background: $yellow;
+}
+
+.dotted-bottom {
+  border-color: $gray;
+}
+
+.article-date {
+  color: $gray-darker;
+}
+
+@mixin page-color($color) {
+  .section-title::before {
+    color: $color;
+  }
+  a {
+    color: $color;
+  }
+  .section-link {
+    &::after {
+      color: $color;
+    }
+  }
+  .nav a {
+    color: $black;
+  }
+  .nav a:hover {
+    color: $color;
+  }
+  .hero {
+    color: $color;
+  }
+  .footer-contact {
+    background-color: $color;
+  }
+  .tag {
+    border-color: $color;
+  }
+}
+
+@mixin page-invert-color($color) {
+  background-color: $color;
+  color: $white;
+  .section-title {
+    color: $black;
+  }
+  .section-title::before {
+    color: $white;
+  }
+  a {
+    color: $black;
+  }
+  .social-connect {
+    .social-icon {
+      fill: $white;
+    }
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $black;
+      .social-icon {
+        fill: $black;
+      }
+    }
+  }
+}
+
+.orange {
+  @include page-color($orange);
+}
+
+.blue {
+  @include page-color($blue);
+}
+
+.orange .color-invert {
+  @include page-invert-color($orange);
+}
+
+.blue .color-invert {
+  @include page-invert-color($blue);
+}

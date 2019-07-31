@@ -2,7 +2,7 @@
 {
   "title": "React and Redux",
   "date": "2018-06-18 15:07:23",
-  "tags": ["javascript", "web", "react"],
+  "tags": ["javascript", "web"],
   "blurb": "For the longest time after React was released I had difficulty really understanding how it was supposed to be used.  Coming from years of MVC/MVVM experience in Java, C#/WPF, and Angular, React seemed strange.  The basic tutorials and examples showed 'how' you do something, but never why, and there was pretty much no separation between view and controller logic.  \n Eventually I sat down and wrote something using React and Redux, following the 'best practices', so I could understand the decisions that went into the frameworks and how they could be used."
 }
 ```

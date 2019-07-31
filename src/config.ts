@@ -7,8 +7,14 @@ export interface Config {
   url: string;
   rss: string;
 
-  outputDir: string;
+  twitter: string;
+  github: string;
+  linkedin: string;
+  podcast: string;
 
+  pronouns: string;
+
+  outputDir: string;
   postFiles: string;
   staticFiles: string;
 }
@@ -22,7 +28,14 @@ export const config: Config = {
   url: 'https://kellen.piffner.com/',
   rss: 'atom.xml',
 
-  postFiles: './contents/posts/',
+  twitter: 'https://twitter.com/@KellenPiffner',
+  github: 'https://github.com/decoy',
+  linkedin: 'https://www.linkedin.com/in/kellenpiffner',
+  podcast: 'https://gettingappsdone.com',
+
+  pronouns: 'https://pronoun.is/they/.../themself',
+
   outputDir: './dist/',
+  postFiles: './contents/posts/',
   staticFiles: './contents/static/',
 };
