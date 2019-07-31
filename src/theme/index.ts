@@ -3,6 +3,7 @@ import Main from './layout/main';
 import Post from './layout/post';
 import Feed from './layout/feed';
 import Tags from './layout/tags';
+import Archive from './layout/archive';
 import { promises } from 'fs';
 import { join, dirname } from 'path';
 import { createDir, copyFiles } from '../util';
@@ -12,17 +13,16 @@ export default async function run(site: Site) {
   await posts(site);
   await feed(site);
   await tags(site);
+  await archive(site);
   await staticFiles(site);
 }
 
 async function index(site: Site) {
-  // create the main index
   const content = Main(site);
   await promises.writeFile(join(site.config.output, 'index.html'), content);
 }
 
 async function posts(site: Site) {
-  // write out all the post contents
   for (let p of site.posts) {
     const content = Post(site, p);
     const path = join(site.config.output, p.link, 'index.html');
@@ -46,6 +46,13 @@ async function tags(site: Site) {
     await createDir(path);
     await promises.writeFile(join(path, 'index.html'), content);
   }
+}
+
+async function archive(site: Site) {
+  const content = Archive(site);
+  const dir = join(site.config.output, 'archives');
+  await createDir(dir);
+  await promises.writeFile(join(dir, 'index.html'), content);
 }
 
 async function staticFiles(site: Site) {
