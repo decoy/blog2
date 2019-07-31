@@ -9,6 +9,7 @@ import { join, dirname } from 'path';
 import { createDir, copyFiles } from '../util';
 
 export default async function run(site: Site) {
+  createDir(site.config.outputDir);
   await index(site);
   await posts(site);
   await feed(site);
@@ -19,13 +20,13 @@ export default async function run(site: Site) {
 
 async function index(site: Site) {
   const content = Main(site);
-  await promises.writeFile(join(site.config.output, 'index.html'), content);
+  await promises.writeFile(join(site.config.outputDir, 'index.html'), content);
 }
 
 async function posts(site: Site) {
   for (let p of site.posts) {
     const content = Post(site, p);
-    const path = join(site.config.output, p.link, 'index.html');
+    const path = join(site.config.outputDir, p.link, 'index.html');
     await createDir(dirname(path));
     await promises.writeFile(path, content, {
       encoding: 'utf8',
@@ -36,13 +37,13 @@ async function posts(site: Site) {
 
 async function feed(site: Site) {
   const content = Feed(site);
-  await promises.writeFile(join(site.config.output, 'atom.xml'), content);
+  await promises.writeFile(join(site.config.outputDir, site.config.rss), content);
 }
 
 async function tags(site: Site) {
   for (let t of Object.keys(site.tags)) {
     const content = Tags(site, t);
-    const path = join(site.config.output, 'tags', t.toLowerCase());
+    const path = join(site.config.outputDir, 'tags', t.toLowerCase());
     await createDir(path);
     await promises.writeFile(join(path, 'index.html'), content);
   }
@@ -50,11 +51,11 @@ async function tags(site: Site) {
 
 async function archive(site: Site) {
   const content = Archive(site);
-  const dir = join(site.config.output, 'archives');
+  const dir = join(site.config.outputDir, 'archives');
   await createDir(dir);
   await promises.writeFile(join(dir, 'index.html'), content);
 }
 
 async function staticFiles(site: Site) {
-  await copyFiles(site.config.staticFiles, site.config.output);
+  await copyFiles(site.config.staticFiles, site.config.outputDir);
 }

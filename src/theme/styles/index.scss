@@ -1,2 +1,33 @@
+$white: #ffffff;
+$black: #130307;
+$gray: #7e7e7e;
+$blue: #009ce2;
+$orange: #ff861d;
+$yellow: #fe6;
+
+// @media (min-width: $breakpoint-small) {  }
+$breakpoint-small: 30rem;
+$breakpoint-med: 45rem;
+$breakpoint-large: 60rem;
+
+$primary-font: 'Helvetica Neue', 'Helvetica', sans-serif;
+$secondary-font: 'Courier New', Courier, monospace;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 900;
+$font-height: 1.5;
+
+body {
+  font-family: $primary-font;
+  color: $black;
+  line-height: $font-height;
+}
+
+.f-1 {
+  font-size: 5em;
+}
+
 @import '_normalize.scss';
-@import '_colors.scss';
+@import '_grid.scss';
+@import '_components.scss';

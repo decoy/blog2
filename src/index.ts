@@ -3,6 +3,7 @@ import * as path from 'path';
 import * as Markdown from 'markdown-it';
 import { getFiles } from './util';
 import Theme from './theme';
+import { config, Config } from './config';
 
 export interface PostMeta {
   title: string;
@@ -19,17 +20,7 @@ export interface Post {
 }
 
 export interface Site {
-  config: {
-    author: string;
-    title: string;
-    root: string;
-    url: string;
-    output: string;
-    description: string;
-    favicon: string;
-    rss: string;
-    staticFiles: string;
-  };
+  config: Config;
   tags: { [tag: string]: number };
   posts: Post[];
 }
@@ -61,7 +52,6 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
       doc.meta = JSON.parse(front!.content);
     } else if (front.info == 'js') {
       doc.meta = vm.runInNewContext(front.content, {});
-      console.log(doc.meta);
     }
     if (doc.meta.blurb) {
       // the blurbs are all in md.
@@ -85,28 +75,13 @@ async function loadPosts(dir: string) {
 }
 
 export async function loadSite(dir: string) {
-  console.log(dir);
-  const config = {
-    posts: './contents/posts',
-  };
-
   const site: Site = {
-    config: {
-      author: 'Kel Piffner',
-      title: "Hi, I'm Kel",
-      root: '/',
-      url: 'https://kellen.piffner.com/',
-      description: '',
-      favicon: '',
-      rss: '',
-      output: './dist',
-      staticFiles: './static/',
-    },
+    config: config,
     tags: {},
     posts: [],
   };
 
-  site.posts = await loadPosts(config.posts);
+  site.posts = await loadPosts(config.postFiles);
 
   site.posts = site.posts.sort((b, a) => a.path.localeCompare(b.path));
 
@@ -120,7 +95,6 @@ export async function loadSite(dir: string) {
     }
   }
 
-  console.log(site.tags);
   return site;
 }
 

@@ -30,7 +30,12 @@ export function head(site: Site, page?: Post) {
       <title>
         ${title}
       </title>
-      <link rel="alternative" href="${site.config.rss}" title="${site.config.title}" type="application/atom+xml" />
+      <link
+        rel="alternative"
+        href="${site.config.root + site.config.rss}"
+        title="${site.config.title}"
+        type="application/atom+xml"
+      />
       <link rel="icon" href="${site.config.favicon}" />
       <link rel="stylesheet" href="${site.config.root}index.css" type="text/css" />
     </head>
