@@ -13,7 +13,9 @@ export default function generate(site: Site) {
           <div class="container row">
             <div class="archive-section-content">
               <h1 class="section-title">Viewing all posts</h1>
-              ${site.posts.map((p) => post(site, p))}
+              <div class="archive-list">
+                ${site.posts.map((p) => post(site, p))}
+              </div>
             </div>
           </div>
         </main>

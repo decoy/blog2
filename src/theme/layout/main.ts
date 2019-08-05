@@ -132,7 +132,7 @@ function footer(site: Site) {
               latest buzzwords, send me a message!
             </p>
             <p>P.S. I use <a target="_blank" href="${site.config.pronouns}">they/them pronouns</a> :)</p>
-            <form>
+            <form action="https://formspree.io/contact@piffner.com" method="POST">
               <input type="text" name="name" required placeholder="Name *" />
               <input type="text" name="pronouns" required placeholder="Pronouns" />
               <input type="email" name="email" required placeholder="Email Address *" />

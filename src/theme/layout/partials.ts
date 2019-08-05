@@ -1,9 +1,9 @@
-import { html } from '../../util';
+import { html, formatDate } from '../../util';
 import { Post, Site } from '../..';
 
 export function head(site: Site, page?: Post) {
   const title = page && page.meta.title ? page.meta.title : site.config.title;
-  const description = page && page.meta.blurb ? page.meta.blurb : site.config.description;
+  const description = page && page.meta.description ? page.meta.description : site.config.description;
   return html`
     <head>
       <meta lang="en" />
@@ -42,17 +42,6 @@ export function nav(site: Site, page?: Post) {
       </nav>
     </header>
   `;
-}
-
-function formatDate(date: Date) {
-  return date.getFullYear() + '.' + padNumber(date.getMonth() + 1) + '.' + padNumber(date.getDay());
-}
-
-function padNumber(num: number) {
-  if (num <= 9) {
-    return '0' + num;
-  }
-  return '' + num;
 }
 
 export function articleMini(post: Post, site: Site) {

@@ -79,3 +79,14 @@ export async function copyFiles(dir: string, outdir: string) {
 export async function createDir(dir: string) {
   await promises.mkdir(dir, { recursive: true });
 }
+
+export function formatDate(date: Date) {
+  return date.getFullYear() + '.' + padNumber(date.getMonth() + 1) + '.' + padNumber(date.getDay());
+}
+
+export function padNumber(num: number) {
+  if (num <= 9) {
+    return '0' + num;
+  }
+  return '' + num;
+}

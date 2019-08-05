@@ -8,6 +8,7 @@ import { config, Config } from './config';
 export interface PostMeta {
   title: string;
   date: string;
+  description: string;
   blurb: string;
   tags: string[];
 }
@@ -40,6 +41,7 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
       title: '',
       date: '',
       blurb: '',
+      description: '',
       tags: [],
     },
     content: '',
