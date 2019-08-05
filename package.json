@@ -1,14 +1,7 @@
 {
-  "name": "mxbuildy",
+  "name": "blog2",
   "version": "1.0.0",
-  "description": "Simplistic library for generating static sites",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src",
-    "tests"
-  ],
+  "private": true,
   "scripts": {
     "build": "ts-node --files src/index.ts",
     "build-css": "node-sass ./src/theme/styles/index.scss -o ./dist",
@@ -17,16 +10,6 @@
     "serve": "live-server dist",
     "start": "npm-run-all --parallel watch watch-css serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/decoy/mxbuildy.git"
-  },
-  "author": "Kel Piffner",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/decoy/mxbuildy/issues"
-  },
-  "homepage": "https://github.com/decoy/mxbuildy#readme",
   "devDependencies": {
     "@types/highlight.js": "^9.12.3",
     "@types/markdown-it": "0.0.8",
