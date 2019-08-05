@@ -14,14 +14,12 @@ export default function generate(site: Site, post: Post) {
         <main>
           <div class="container">
             <div class="post-section-content">
-              <article>
+              <article class="post-content">
                 <header class="post-header">
                   <h1 class="section-title">${post.meta.title}</h1>
                   <p class="post-meta">${author} - <time class="article-date">${date}</time></p>
                 </header>
-                <div class="post-content">
-                  ${post.content}
-                </div>
+                ${post.content}
                 <div class="post-tags clear-after">
                   ${post.meta.tags.map((t) => tag(site, t, 0))}
                 </div>

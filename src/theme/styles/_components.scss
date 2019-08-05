@@ -39,7 +39,7 @@ a {
   text-align: center;
   .hero-title {
     font-family: $secondary-font;
-    font-size: 3rem;
+    font-size: 2.7em;
   }
 }
 
@@ -57,7 +57,7 @@ a {
 
 .section-title {
   font-family: $secondary-font;
-  font-size: 1.75rem;
+  font-size: 1.55em;
   margin: 1.75em 0;
   text-transform: capitalize;
   &::before {
@@ -69,8 +69,8 @@ a {
 .section-link {
   float: right;
   text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
   font-weight: bold;
   &::after {
     content: ' »';
@@ -140,7 +140,7 @@ a {
 }
 
 .tag {
-  font-size: 1rem;
+  font-size: 0.9em;
   border: 1px solid $black;
   padding: 0.5em 1em;
   display: inline-block;
@@ -156,7 +156,7 @@ ul.fancy {
 }
 
 ul.fancy li {
-  padding-left: 1.25rem;
+  padding-left: 1.25em;
   text-indent: -1em;
 }
 
