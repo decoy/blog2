@@ -14,6 +14,12 @@ export const config: Config = {
   linkedin: 'https://www.linkedin.com/in/kellenpiffner',
   podcast: 'https://gettingappsdone.com',
 
+  latestPodcast: {
+    title: 'Failure Is Good!',
+    date: '2019.08.01',
+    blurb: `Kel and Joshua talk about why we should be seeking failure, not seeing it as something to avoid at all costs. They reflect on how failure helps us grow as developers. They also touch on last week's subject of safety and how closely tied the two are.`,
+  },
+
   pronouns: 'https://pronoun.is/they/.../themself',
 
   outputDir: './dist/',

@@ -89,11 +89,11 @@ function podcast(site: Site) {
             <h1 class="section-title">Getting Apps Done</h1>
             <p>
               <img src="img/microphone.svg" class="gad-icon" /> I cohost the
-              <a href="https://gettingappsdone.com">Getting Apps Done</a> podcast, with Joshua Graham, where we discuss
+              <a href="${site.config.podcast}">Getting Apps Done</a> podcast, with Joshua Graham, where we discuss
               subjects like interviewing, motivation, working remotely, learning to code, best practices, and what it
               means to be a software developer in today’s world.
             </p>
-            <p>Check out our <a href="https://gettingappsdone.com/slack">Slack community</a>!</p>
+            <p>Check out our <a href="${site.config.podcast}/slack">Slack community</a>!</p>
           </div>
         </section>
         <section id="podcast-latest" class="col col-1-2">
@@ -101,15 +101,12 @@ function podcast(site: Site) {
             <h1 class="section-title">Our Latest Episode</h1>
             <article class="article-mini">
               <header>
-                <h2 class="article-title">Unicorns In Business Suits</h2>
-                <time class="article-date">2019.07.25</time>
+                <h2 class="article-title">${site.config.latestPodcast.title}</h2>
+                <time class="article-date">${site.config.latestPodcast.date}</time>
               </header>
-              <p>
-                Kel and Joshua talk about breaking the rules in CV (aka resume) building! How to stand out, how to be
-                yourself and how doing so helps you find jobs that are a better match for you.
-              </p>
+              <p>${site.config.latestPodcast.blurb}</p>
               <footer>
-                <div class="section-link"><a href="#">Listen now</a></div>
+                <div class="section-link"><a href="${site.config.podcast}">Listen now</a></div>
               </footer>
             </article>
           </div>

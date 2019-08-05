@@ -26,6 +26,8 @@ interface Config {
   title: string;
   description: string;
 
+  latestPodcast: any;
+
   root: string;
   url: string;
   rss: string;
