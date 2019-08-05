@@ -11,22 +11,20 @@ export default function generate(site: Site, post: Post) {
       ${head(site, post)}
       <body class="f4 orange">
         ${nav(site)}
-        <main>
-          <div class="container">
-            <div class="post-section-content">
-              <article class="post-content">
-                <header class="post-header">
-                  <h1 class="section-title">${post.meta.title}</h1>
-                  <p class="post-meta">${author} - <time class="article-date">${date}</time></p>
-                </header>
-                ${post.content}
-                <div class="post-tags clear-after">
-                  ${post.meta.tags.map((t) => tag(site, t, 0))}
-                </div>
-              </article>
-            </div>
+
+        <div class="container">
+          <div class="post-section-content">
+            <article class="post-content">
+              <h1 class="section-title">${post.meta.title}</h1>
+              <p class="post-meta">${author} - <time class="article-date">${date}</time></p>
+              ${post.content}
+              <div class="post-tags clear-after">
+                ${post.meta.tags.map((t) => tag(site, t, 0))}
+              </div>
+            </article>
           </div>
-        </main>
+        </div>
+
         ${footer(site)}
       </body>
     </html>
