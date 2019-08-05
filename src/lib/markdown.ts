@@ -33,6 +33,7 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
     meta: {
       title: '',
       date: '',
+      updated: '',
       blurb: '',
       description: '',
       author: '',

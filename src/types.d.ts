@@ -1,6 +1,7 @@
 interface PostMeta {
   title: string;
   date: string;
+  updated: string;
   author: string;
   description: string;
   blurb: string;

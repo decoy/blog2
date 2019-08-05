@@ -3,7 +3,7 @@ import * as path from 'path';
 export const config: Config = {
   author: 'Kel Piffner',
   title: "Hi, I'm Kel",
-  description: '',
+  description: 'Developer of software, processes, and people.',
 
   root: '/',
   url: 'https://kellen.piffner.com/',

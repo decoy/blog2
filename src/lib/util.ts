@@ -81,7 +81,7 @@ export async function createDir(dir: string) {
 }
 
 export function formatDate(date: Date) {
-  return date.getFullYear() + '.' + padNumber(date.getMonth() + 1) + '.' + padNumber(date.getDay());
+  return date.getFullYear() + '.' + padNumber(date.getMonth() + 1) + '.' + padNumber(date.getDate());
 }
 
 export function padNumber(num: number) {
