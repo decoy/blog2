@@ -10,6 +10,7 @@ export function head(site: Site, page?: Post) {
       <meta name="author" content="${site.config.author}" />
       <meta name="title" content="${title}" />
       <meta name="description" content="${description}" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>
         ${title}
       </title>

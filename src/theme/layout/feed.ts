@@ -1,5 +1,3 @@
-import { html } from '../../lib/util';
-
 export default function generate(site: Site) {
   // const date = new Date().toISOString();
 
@@ -14,7 +12,7 @@ export default function generate(site: Site) {
   return `
     <feed xmlns="http://www.w3.org/2005/Atom">
       <title>${site.config.title}</title>
-      <link href="/atom.xml" rel="self" />
+      <link href="${site.config.url}atom.xml" rel="self" />
       <link href="${site.config.url}" />
       <updated>${date}</updated>
       <id>${site.config.url}</id>

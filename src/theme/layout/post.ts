@@ -13,8 +13,8 @@ export default function generate(site: Site, post: Post) {
         ${nav(site)}
         <main>
           <div class="container">
-            <article>
-              <div class="post-section-content">
+            <div class="post-section-content">
+              <article>
                 <header class="post-header">
                   <h1 class="section-title">${post.meta.title}</h1>
                   <p class="post-meta">${author} - <time class="article-date">${date}</time></p>
@@ -25,8 +25,8 @@ export default function generate(site: Site, post: Post) {
                 <div class="post-tags clear-after">
                   ${post.meta.tags.map((t) => tag(site, t, 0))}
                 </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
         </main>
         ${footer(site)}

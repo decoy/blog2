@@ -35,5 +35,5 @@ export function makePostPath(file: string) {
   const day = parts.shift();
   const end = parts.join('-').trim();
 
-  return path.join(year!, month!, day!, end).replace(/\\/g, '/');
+  return path.join(year!, month!, day!, end).replace(/\\/g, '/') + '/';
 }
