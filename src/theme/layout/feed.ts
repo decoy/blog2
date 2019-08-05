@@ -1,5 +1,4 @@
-import { html } from '../../util';
-import { Post, Site } from '../..';
+import { html } from '../../lib/util';
 
 export default function generate(site: Site) {
   const date = new Date().toISOString();

@@ -1,4 +1,3 @@
-import { Site } from '../';
 import Main from './layout/main';
 import Post from './layout/post';
 import Feed from './layout/feed';
@@ -7,7 +6,7 @@ import Archive from './layout/archive';
 import Sitemap from './layout/sitemap';
 import { promises } from 'fs';
 import { join, dirname } from 'path';
-import { createDir, copyFiles } from '../util';
+import { createDir, copyFiles } from '../lib/util';
 
 export default async function run(site: Site) {
   createDir(site.config.outputDir);

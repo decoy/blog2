@@ -1,5 +1,4 @@
-import { html } from '../../util';
-import { Post, Site } from '../..';
+import { html } from '../../lib/util';
 import { head, nav, articleMini, footer } from './partials';
 
 export default function generate(site: Site, tag: string) {

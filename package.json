@@ -10,7 +10,7 @@
     "tests"
   ],
   "scripts": {
-    "build": "ts-node src/index.ts",
+    "build": "ts-node --files src/index.ts",
     "build-css": "node-sass ./src/theme/styles/index.scss -o ./dist",
     "watch": "nodemon",
     "watch-css": "node-sass ./src/theme/styles/index.scss -o ./dist -w",

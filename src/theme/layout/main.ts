@@ -1,5 +1,4 @@
-import { html } from '../../util';
-import { Post, Site } from '../..';
+import { html } from '../../lib/util';
 import { head, nav, articleMini, social } from './partials';
 
 function hero() {

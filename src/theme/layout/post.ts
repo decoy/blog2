@@ -1,5 +1,4 @@
-import { html, formatDate } from '../../util';
-import { Post, Site } from '../..';
+import { html, formatDate } from '../../lib/util';
 import { head, nav, footer } from './partials';
 import { tag } from './main';
 

@@ -1,5 +1,4 @@
-import { html, formatDate } from '../../util';
-import { Post, Site } from '../..';
+import { html, formatDate } from '../../lib/util';
 
 export function head(site: Site, page?: Post) {
   const title = page && page.meta.title ? page.meta.title : site.config.title;

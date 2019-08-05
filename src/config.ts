@@ -1,23 +1,4 @@
-export interface Config {
-  author: string;
-  title: string;
-  description: string;
-
-  root: string;
-  url: string;
-  rss: string;
-
-  twitter: string;
-  github: string;
-  linkedin: string;
-  podcast: string;
-
-  pronouns: string;
-
-  outputDir: string;
-  postFiles: string;
-  staticFiles: string;
-}
+import * as path from 'path';
 
 export const config: Config = {
   author: 'Kel Piffner',
@@ -39,3 +20,14 @@ export const config: Config = {
   postFiles: './contents/posts/',
   staticFiles: './contents/static/',
 };
+
+// TODO: this probably should somehow be part of the theme.
+export function makePostPath(file: string) {
+  const parts = path.basename(file, '.md').split('-');
+  const year = parts.shift();
+  const month = parts.shift();
+  const day = parts.shift();
+  const end = parts.join('-').trim();
+
+  return path.join(year!, month!, day!, end).replace(/\\/g, '/');
+}
