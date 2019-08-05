@@ -7,8 +7,6 @@ export default function generate(site: Site) {
     .sort((a, b) => b.getTime() - a.getTime())[0]
     .toISOString();
 
-  console.log(date);
-
   return `
     <feed xmlns="http://www.w3.org/2005/Atom">
       <title>${site.config.title}</title>

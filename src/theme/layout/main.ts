@@ -89,11 +89,11 @@ function podcast(site: Site) {
             <h1 class="section-title">Getting Apps Done</h1>
             <p>
               <img src="img/microphone.svg" class="gad-icon" /> I cohost the
-              <a href="${site.config.podcast}">Getting Apps Done</a> podcast, with Joshua Graham, where we discuss
-              subjects like interviewing, motivation, working remotely, learning to code, best practices, and what it
-              means to be a software developer in today’s world.
+              <a href="${site.config.podcast}" target="_blank">Getting Apps Done</a> podcast, with Joshua Graham, where
+              we discuss subjects like interviewing, motivation, working remotely, learning to code, best practices, and
+              what it means to be a software developer in today’s world.
             </p>
-            <p>Check out our <a href="${site.config.podcast}/slack">Slack community</a>!</p>
+            <p>Check out our <a href="${site.config.podcast}/slack" target="_blank">Slack community</a>!</p>
           </div>
         </section>
         <section id="podcast-latest" class="col col-1-2">
@@ -106,7 +106,7 @@ function podcast(site: Site) {
               </header>
               <p>${site.config.latestPodcast.blurb}</p>
               <footer>
-                <div class="section-link"><a href="${site.config.podcast}">Listen now</a></div>
+                <div class="section-link"><a href="${site.config.podcast}" target="_blank">Listen now</a></div>
               </footer>
             </article>
           </div>
