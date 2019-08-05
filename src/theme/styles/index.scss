@@ -5,6 +5,7 @@ $gray-darker: #7e7e7e;
 $blue: #009ce2;
 $orange: #ff861d;
 $yellow: #fe6;
+$gray-lighter: #efefef;
 
 // @media (min-width: $breakpoint-small) {  }
 $breakpoint-small: 30rem;
@@ -57,3 +58,4 @@ h6 {
 @import '_forms.scss';
 @import '_components.scss';
 @import '_colors.scss';
+@import '../../../node_modules/highlight.js/scss/docco.scss';

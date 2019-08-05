@@ -10,6 +10,10 @@
   color: $gray-darker;
 }
 
+.post-meta {
+  color: $gray-darker;
+}
+
 @mixin page-color($color) {
   .section-title::before {
     color: $color;

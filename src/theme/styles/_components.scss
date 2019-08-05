@@ -88,6 +88,40 @@ a {
   margin-right: auto;
   max-width: $breakpoint-large;
   padding: 2em;
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  blockquote {
+    border-left: 2px dashed $gray;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: $gray-lighter;
+  }
+}
+
+.post-header {
+  margin: 2em 0;
+}
+
+.post-tags {
+  margin: 4em 0;
+  .tag {
+    float: right;
+  }
 }
 
 .archive-section-content {

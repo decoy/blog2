@@ -8,6 +8,7 @@ import { config, Config } from './config';
 export interface PostMeta {
   title: string;
   date: string;
+  author: string;
   description: string;
   blurb: string;
   tags: string[];
@@ -27,8 +28,25 @@ export interface Site {
 }
 
 import * as vm from 'vm';
+import * as hljs from 'highlight.js';
 
-const md = new Markdown({ html: true });
+const mdOptions = {
+  html: true,
+  langPrefix: 'hljs language-',
+  highlight: (str: string, lang: string) => {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        const value = hljs.highlight(lang, str).value;
+        return value;
+      } catch (err) {
+        console.log('an error highlighting', err);
+      }
+    }
+    return ''; // use external default escaping
+  },
+};
+
+const md = new Markdown(mdOptions);
 
 export async function loadMarkdownFile(path: string): Promise<Post> {
   const data = await promises.readFile(path, 'utf8');
@@ -42,6 +60,7 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
       date: '',
       blurb: '',
       description: '',
+      author: '',
       tags: [],
     },
     content: '',
@@ -62,7 +81,7 @@ export async function loadMarkdownFile(path: string): Promise<Post> {
   }
 
   // build the actual markdown
-  doc.content = md.renderer.render(tokens, {}, {});
+  doc.content = md.renderer.render(tokens, mdOptions, {});
   return doc;
 }
 
