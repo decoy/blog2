@@ -13,7 +13,9 @@ It’s based around the concept of a game show where a contestant must pick one 
 
 <!-- more -->
 
-{% limg img/montyhall1.png title="Goat" %}
+<div>
+  <img src="/img/montyhall1.png" title="Goat behind a door" />
+</div>
 
 At first, most people guess that it doesn’t matter. There are two closed doors, so your chance must be 1:2 to guess correctly, right? The correct answer: You should always switch.
 
@@ -30,7 +32,9 @@ Try it yourself:
 
 You can see that when simulating play, the odds roughly come out to be 1:3 when staying, and 2:3 when switching doors.
 
-{% limg img/montyhall2.png %}
+<div>
+  <img src="/img/montyhall2.png" title="Run statistics" />
+</div>
 
 ## Different way of thinking
 

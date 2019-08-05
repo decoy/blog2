@@ -29,8 +29,12 @@ The most common home-grown 'ticket system' that I've seen has been the spreadshe
 
 A cardwall takes those items and places them in a more human-friendly view.
 
-{% limg img/starter-process/cardwall.png title="A cardwall" class="contained" %}
-_(An agile process just isn't the same without the cardwall.)_
+<div class="article-image">
+  <img src="/img/starter-process/cardwall.png" title="A cardwall" />
+  <div class="article-image-sub">
+    <div>An agile process just isn't the same without the cardwall.</div>
+  </div>
+</div>
 
 Each card represents the product 'vision' from the product manager.
 
@@ -72,7 +76,9 @@ When you're first getting started, though, I recommend t-shirt sizes, with rough
 
 You'll notice that with each size increase the range of days grows. This is because the more complex a solution that is required, the more unknowns that can derail it. This uncertainty is represented by larger time frames in the estimations.
 
-{% limg img/starter-process/estimates.png title="Estimates graph" class="contained" %}
+<div class="">
+  <img src="/img/starter-process/estimates.png" title="A graph of estimates" />
+</div>
 
 > Over time, actual metrics can be used to determine the real world days required for features, and you can use previous features as references on sizes. It's very common for the meaning of the sizes to change over time as the teams and processes change.
 

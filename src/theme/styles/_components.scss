@@ -181,6 +181,29 @@ ul.fancy li::before {
   margin-bottom: 0.25em;
 }
 
+.article-short .article-image cite {
+  display: none;
+}
+
+.article-image {
+  font-size: 0.9em;
+  margin-bottom: 2em;
+}
+
+.article-image img {
+  width: 100%;
+  margin: 0;
+}
+
+.article-image-sub {
+  color: $gray-darker;
+}
+
+.article-image cite {
+  display: block;
+  text-align: right;
+}
+
 .social-icon {
   display: inline-block;
   width: 1em;

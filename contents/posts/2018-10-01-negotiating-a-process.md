@@ -15,8 +15,12 @@ But working without a process leads to chaos. Missed deadlines. Solutions that d
 
 <!-- more -->
 
-{% limg img/negotiating-a-process/confused.jpg title="Process confusion" class="contained" %}
-_(Just your average confused developer and/or product manager)_
+<div class="article-image">
+  <img src="/img/negotiating-a-process/confused.jpg" title="Process confusion" />
+  <div class="article-image-sub">
+    <div>Just your average confused developer and/or product manager</div>
+  </div>
+</div>
 
 Processes exist to streamline our inputs and outputs when working with each other. It makes results predictable, repeatable, and, most importantly, changeable.
 
@@ -71,9 +75,6 @@ An important thing to keep in mind is that processes can be improved just like s
 Schedule times for retrospectives, where everyone talks over how things are going. Review the features and bugs, the successes and failures.
 
 Determine if changes are necessary to the process. Is a failure going to happen again and again in a way that's fixable by a simple change in the current process? Could you repeat a success by doing the same?
-
-{% limg img/negotiating-a-process/process-your-process.png title="Yo dawg, process inception" class="contained" %}
-_(Yes, a process for improving your process)_
 
 This might sound like a pain to convince people to do regularly, but luckily people enjoy solving problems, especially when it's something that affects their day to day working life. Keep communication open and honest, and you'll be amazed how well things can work out.
 

@@ -67,8 +67,14 @@ When a component updates its state, it causes a re-render. The current component
 
 Instead of directly updating the DOM, components update the "Virtual DOM", which is a DOM tree in memory. It's not rendered directly to the browser. This virtual DOM is then compared against the 'real' DOM and the real DOM is updated with just the changes between the two.
 
-{% limg img/react-redux/virtual_dom_diff.png title="Virtual DOM Diff" class="c12" %}
-<cite>[Image Source](https://github.com/DonaldWhyte/isomorphic-react-workshop)</cite>
+<div class="article-image">
+  <img src="/img/react-redux/virtual_dom_diff.png" title="Virtual DOM Diff" />
+  <div class="article-image-sub">
+    <cite>
+      <a href="https://github.com/DonaldWhyte/isomorphic-react-workshop">Image Source</a>
+    </cite>
+  </div>
+</div>
 
 Combined with the 'reactive' component updates (the component only updates in reaction to setState()), this makes React quite good at only updating what's necessary and minimizing the visible page updates (generally the most computationally expensive part of a change.)
 

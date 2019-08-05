@@ -14,7 +14,7 @@ But was it really a failure of the interviewee?`,
 ```
 
 <div class="article-image">
-  {% limg img/bad-interview-questions/branko-stancevic-417172-unsplash.jpg title="Programming Skills" class="c12" %}
+  <img src="/img/bad-interview-questions/branko-stancevic-417172-unsplash.jpg" title="Programming Skills" />
   <div class="article-image-sub">
     <cite>
       <a href="https://unsplash.com/@bdchu614?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Photo by Brendan Church on Unsplash</a>
@@ -39,7 +39,7 @@ It's been a long time and many interviews since those first ones and I now look 
 # Fear
 
 <div class="article-image">
-  {% limg img/bad-interview-questions/ben-white-292680-unsplash.jpg title="Nerves" class="c12" %}
+  <img src="/img/bad-interview-questions/ben-white-292680-unsplash.jpg" title="Nerves" />
   <div class="article-image-sub">
     <cite>
       <a href="https://unsplash.com/@benwhitephotography?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Photo by Ben White on Unsplash</a>
@@ -76,7 +76,7 @@ For example: If the candidate said yes, ask them about the time they used it. As
 Even if they said no, they still haven't necessarily failed. Ask them if they think they could "figure it out." (I've yet to interview a technical job candidate who wasn't confident they could figure something out that they didn't know given time and google). Now do the handout. The handout in our interview was an actual script we used daily. It was an accurate representation of the job. _Tell them that_. It gives them incentive to really try figuring it out since it's the job they _want_ to do. For an even more accurate job representation, hand them a laptop with Google ready. Letting someone know that you won't arbitrarily limit their tools to get a job done does wonders for relaxing them.
 
 <div class="article-image">
-  {% limg img/bad-interview-questions/rawpixel-423656-unsplash.jpg title="By the power of your beard, Google the answer" class="c12" %}
+  <img src="/img/bad-interview-questions/rawpixel-423656-unsplash.jpg" title="By the power of your beard, Google the answer" />
   <div class="article-image-sub">
   <div>By the power of your beard and Google, figure out the answer. </div>
   <cite>
@@ -135,7 +135,7 @@ Iteration is always important. Something I've learned relatively recently is to 
 # Conclusion - Interviews vs. Tests
 
 <div class="article-image">
-  {% limg img/bad-interview-questions/rawpixel-1046277-unsplash.jpg title="Another successful handshake" class="c12" %}
+  <img src="/img/bad-interview-questions/rawpixel-1046277-unsplash.jpg" title="Another successful handshake" />
   <div class="article-image-sub">
     <cite>
       <a href="https://unsplash.com/@rawpixel?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Photo by rawpixel on Unsplash</a>

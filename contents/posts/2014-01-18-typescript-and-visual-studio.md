@@ -25,13 +25,17 @@ Typescript is developed by Microsoft. Because of this, it has brilliant integrat
 
 If you've used Visual Studio, working in typescript will feel pretty normal. You'll create a class, instantiate it, type in `foo.` and get your expected list of methods.
 
-{% limg img/ts_intellisense.png %}
+<div>
+  <img src="/img/ts_intellisense.png" title="Intellisense" />
+</div>
 
 Visual Studio has options to "Compile on Save" which means the compiled javascript is created as soon as you save the file, making it immediately available in your project. At one point, this compile action was a little slow, and could cause a delay in your save > refresh workflow. This hasn't been the case in the newest versions.
 
 By default, Visual Studio will even generate a map file for you that tells debuggers like Chrome how to line up the javascript file with the typescript file. I've actually found this particular feature in the Chrome browser to be annoying, and instead disable this option in the project settings.
 
-{% limg img/ts_sourcemaps.png %}
+<div>
+  <img src="/img/ts_sourcemaps.png" title="Generate source maps checkbox" />
+</div>
 
 Why? Well, this the feature exists to make it easier to 'debug' your javascript, but when your typescript looks like this:
 

@@ -8,7 +8,7 @@
 ```
 
 <div class="article-image">
-  {% limg img/compromise-and-test/rawpixel-669602-unsplash.jpg title="Let's argue about computer things" class="c12" %}
+  <img src="/img/compromise-and-test/rawpixel-669602-unsplash.jpg" title="Let's argue about computer things" />
   <div class="article-image-sub">
     <cite>
       <a href="https://unsplash.com/@rawpixel?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Photo by rawpixel on Unsplash</a>

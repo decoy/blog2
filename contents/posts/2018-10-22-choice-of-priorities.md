@@ -8,7 +8,7 @@
 ```
 
 <div class="article-image">
-  {% limg img/choice-of-priorities/brendan-church-182747-unsplash.jpg title="Which way?" class="c12" %}
+  <img src="/img/choice-of-priorities/brendan-church-182747-unsplash.jpg" title="Which way?" />
   <div class="article-image-sub">
     <cite>
       <a href="https://unsplash.com/@bdchu614?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Photo by Brendan Church on Unsplash</a>
