@@ -34,6 +34,11 @@ a {
   padding-bottom: 9em;
 }
 
+.spaced-section-sm {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
 .hero {
   padding: 11em 0;
   text-align: center;
@@ -111,10 +116,14 @@ a {
     padding: 1em;
     background-color: $gray-lighter;
   }
+
+  .section-title {
+    margin: 0.5em 0;
+  }
 }
 
 .post-tags {
-  margin: 4em 0;
+  // margin: 4em 0;
   .tag {
     float: right;
   }

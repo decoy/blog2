@@ -6,9 +6,9 @@ export default function generate(site: Site) {
     <!DOCTYPE html>
     <html>
       ${head(site)}
-      <body class="f4 blue">
+      <body class="f4 blue flx-body">
         ${nav(site)}
-        <main>
+        <main clas="flx-main">
           <div class="container row">
             <div class="archive-section-content">
               <h1 class="section-title">Viewing all posts</h1>

@@ -66,7 +66,7 @@ export function articleMini(post: Post, site: Site) {
 export function footer(site: Site) {
   return html`
     <footer class="color-invert">
-      <div class="container row spaced-section">
+      <div class="container row spaced-section-sm">
         <section id="contact" class="col col-1-2">
           <div class="section-content">
             <h1 class="section-title">Get In Touch</h1>

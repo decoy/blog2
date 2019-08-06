@@ -7,13 +7,15 @@ export default function generate(site: Site, tag: string) {
     <!DOCTYPE html>
     <html>
       ${head(site)}
-      <body class="f4 orange">
+      <body class="f4 orange flx-body">
         ${nav(site)}
-        <main>
+        <main class="flx-main">
           <div class="container row">
-            <div class="section-content">
+            <div class="archive-section-content">
               <h1 class="section-title">Posts for tag: ${tag}</h1>
-              ${posts.map((p) => post(site, p))}
+              <div class="archive-list">
+                ${posts.map((p) => post(site, p))}
+              </div>
             </div>
           </div>
         </main>
