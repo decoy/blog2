@@ -15,9 +15,9 @@ export const config: Config = {
   podcast: 'https://gettingappsdone.com',
 
   latestPodcast: {
-    title: 'Failure Is Good!',
-    date: '2019.08.01',
-    blurb: `Kel and Joshua talk about why we should be seeking failure, not seeing it as something to avoid at all costs. They reflect on how failure helps us grow as developers. They also touch on last week's subject of safety and how closely tied the two are.`,
+    title: 'Feedback is the BEEP!',
+    date: '2019.08.08',
+    blurb: `Joshua and Kel chat about feedback: what it is, what it’s good for, how critical it is to growth and how it ties to safety and failure.`,
   },
 
   pronouns: 'https://pronoun.is/they/.../themself',
