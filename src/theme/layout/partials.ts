@@ -89,6 +89,13 @@ export function footer(site: Site) {
   `;
 }
 
+export function tag(site: Site, tag: string, count: number) {
+  const link = site.config.root + 'tags/' + tag.toLowerCase() + '/';
+  return html`
+    <a href="${link}" class="tag">${tag}</a>
+  `;
+}
+
 export function social(site: Site) {
   return html`
     <span class="social-link">

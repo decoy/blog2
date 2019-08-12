@@ -1,6 +1,5 @@
 import { html, formatDate } from '../../lib/util';
-import { head, nav, footer } from './partials';
-import { tag } from './main';
+import { head, nav, footer, tag } from './partials';
 
 export default function generate(site: Site, post: Post) {
   const date = formatDate(new Date(post.meta.date));

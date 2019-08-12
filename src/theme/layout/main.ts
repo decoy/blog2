@@ -1,5 +1,5 @@
 import { html } from '../../lib/util';
-import { head, nav, articleMini, social } from './partials';
+import { head, nav, articleMini, social, tag } from './partials';
 
 function hero() {
   return html`
@@ -150,13 +150,6 @@ function footer(site: Site) {
         </section>
       </div>
     </footer>
-  `;
-}
-
-export function tag(site: Site, tag: string, count: number) {
-  const link = site.config.root + 'tags/' + tag.toLowerCase() + '/';
-  return html`
-    <a href="${link}" class="tag">${tag}</a>
   `;
 }
 
