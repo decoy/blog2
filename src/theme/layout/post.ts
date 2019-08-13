@@ -12,7 +12,7 @@ export default function generate(site: Site, post: Post) {
         ${nav(site)}
         <article class="container post-section-content">
           <h1 class="section-title">${post.meta.title}</h1>
-          <p class="post-meta">${author} - <time class="article-date">${date}</time></p>
+          <p class="post-meta">${author} <time class="article-date">${date}</time></p>
           ${post.content}
         </article>
         <div class="container post-section-content">

@@ -11,6 +11,7 @@ a {
 
   a {
     text-decoration: none;
+
   }
   a:hover {
     text-decoration: underline;
@@ -22,6 +23,23 @@ a {
   ul {
     margin: 0;
     padding: 1em;
+  }
+
+  @media only screen and (max-width: $breakpoint-med) {
+    a {
+      // make the whole box clickable
+      display: block;
+    }
+    li {
+      // carried over from the tag styles
+      font-size: 0.9em;
+      border: 1px solid $gray;
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      text-transform: uppercase;
+      letter-spacing: $font-spaced;
+    }
+
   }
 }
 
@@ -40,7 +58,7 @@ a {
 }
 
 .hero {
-  padding: 11em 0;
+  padding: 11em 1em;
   text-align: center;
   .hero-title {
     font-family: $secondary-font;
@@ -65,6 +83,8 @@ a {
   font-size: 1.55em;
   margin: 1.75em 0;
   text-transform: capitalize;
+  text-indent: -1.75em;
+  padding-left: 1.75em;
   &::before {
     content: '// ';
     font-family: $secondary-font;
@@ -155,7 +175,7 @@ a {
   display: inline-block;
   margin: 0.25em;
   text-transform: uppercase;
-  letter-spacing: 0.075em;
+  letter-spacing: $font-spaced;
 }
 
 ul.fancy {
@@ -221,7 +241,7 @@ ul.fancy li::before {
 
 .social-connect {
   font-size: 1em;
-  letter-spacing: 0.075em;
+  letter-spacing: $font-spaced;
   text-transform: uppercase;
   .social-link {
     margin-right: 0.5em;
