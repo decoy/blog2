@@ -38,6 +38,7 @@ export function nav(site: Site, page?: Post) {
             <li class="col col-1-5"><a href="${site.config.root}#podcast">podcast</a></li>
             <li class="col col-1-5"><a href="${site.config.root}#contact">contact</a></li>
           </ul>
+          <div class="arrow"></div>
         </div>
       </nav>
     </header>
