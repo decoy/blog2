@@ -28,7 +28,7 @@ function entry(site: Site, post: Post) {
   const updated = new Date(post.meta.updated ? post.meta.updated : post.meta.date).toISOString();
   return `
        <entry>
-        <title>Mindset</title>
+        <title>${post.meta.title}</title>
         <link href="${link}" />
         <id>${link}</id>
         <published>${published}</published>
