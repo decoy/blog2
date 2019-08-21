@@ -3,7 +3,7 @@
   title: 'Compromise and Test',
   date: '2018-11-12 09:41:03',
   tags: ['agile'],
-  blurb: `In my [previous post](2018-10-22-choice-of-priorities) I talked about what to do when presented with a question of priorities.  I argue that the answer is to do "both".  But what about when those two priorities are mutually exclusive?  "Do we make the button green or orange?"  You can't really do both in this case, right?`,
+  blurb: `In my previous post, Choice of Priorities, I talked about what to do when presented with a question of priorities.  I argue that the answer is to do "both".  But what about when those two priorities are mutually exclusive?  "Do we make the button green or orange?"  You can't really do both in this case, right?`,
   description: 'When presented with two conflicting choices, try doing them both.',
 });
 ```
