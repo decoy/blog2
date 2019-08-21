@@ -157,7 +157,7 @@ export default function generate(site: Site) {
   return html`
     <!DOCTYPE html>
     <html>
-      ${head(site)}
+      ${head(site, site.config.title, site.config.description, site.config.author, site.config.keywords)}
       <body class="f4 blue">
         ${nav(site)}
         <main>

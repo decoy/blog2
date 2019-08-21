@@ -25,6 +25,7 @@ interface Config {
   author: string;
   title: string;
   description: string;
+  keywords: string[];
 
   latestPodcast: any;
 

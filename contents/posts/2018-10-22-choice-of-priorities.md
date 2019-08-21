@@ -4,6 +4,7 @@
   date: '2018-10-22 14:17:40',
   tags: ['agile'],
   blurb: `Recently my daily feed was filled with a discussion about "What's more important?  Writing maintainable software, or shipping software?"`,
+  description: "What's more important? Writing maintainable software, or shipping software?",
 });
 ```
 

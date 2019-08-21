@@ -3,7 +3,8 @@
   "title": "Introducing PingPongr",
   "date": "2016-01-06 10:00:00",
   "tags": ["PingPongr", "web", "DotNet"],
-  "blurb": "Over the break, I wanted to build a quick nutrition web app.  That's not what end up happening."
+  "blurb": "Over the break, I wanted to build a quick nutrition web app.  That's not what end up happening.",
+  "description": "A simplistic and flexible web framework for DotNet"
 }
 ```
 

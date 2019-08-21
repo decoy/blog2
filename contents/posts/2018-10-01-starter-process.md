@@ -10,6 +10,7 @@ The main audience is new Project/Product managers or developers trying to wrangl
 A good primer on the reasons why you need a process can be found here: [Negotiating a Process](/2018/10/01/negotiating-a-process/).
 
 Good? Let's get started then.`,
+  description: 'An simplistic starter agile process.',
 });
 ```
 

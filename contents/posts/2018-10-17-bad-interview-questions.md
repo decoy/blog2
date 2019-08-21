@@ -10,6 +10,7 @@ Only one candidate answered correctly. Every other candidate failed the question
 On first glance, this seems a reasonable question. Part of the job they were interviewing for often required working with scripts to deploy computers and software. I told them that we weren't looking for a specific answer, just a general idea of "What does this do?" The candidate failing to even make a guess seems like an interview fail. They couldn't think on their feet. They couldn't think creatively.
 
 But was it really a failure of the interviewee?`,
+  description: "Interviews are awful.  Let's fix them by asking better questions.",
 });
 ```
 

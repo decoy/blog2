@@ -43,7 +43,7 @@ function entry(site: Site, post: Post) {
             ${post.meta.blurb}
           ]]>
         </summary>
-        ${post.meta.tags.map((t) => `<category term="${t}" scheme="https://kellen.piffner.com/tags/${t}/"/>`).join('')}
+        ${post.meta.tags.map((t) => `<category term="${t}" scheme="${site.config.url}tags/${t}/"/>`).join('')}
       </entry>
       `;
 }

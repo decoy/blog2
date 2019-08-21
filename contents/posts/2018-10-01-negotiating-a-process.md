@@ -6,6 +6,7 @@
   blurb: `No one likes a new process. It's work to memorize, it's work to do, and it removes your own autonomy from a situation, keeping you from just doing whatever you want to do.
 
 But working without a process leads to chaos. Missed deadlines. Solutions that don't actually solve the problem. Angry customers. Angry managers. Angry developers.`,
+  description: 'A strategy for negotiating a new process.',
 });
 ```
 

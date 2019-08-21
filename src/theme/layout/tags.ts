@@ -6,7 +6,7 @@ export default function generate(site: Site, tag: string) {
   return html`
     <!DOCTYPE html>
     <html>
-      ${head(site)}
+      ${head(site, `All posts for tag: ${tag}`, `Read thoughts about ${tag}`, site.config.author, [tag])}
       <body class="f4 orange flx-body">
         ${nav(site)}
         <main class="flx-main">

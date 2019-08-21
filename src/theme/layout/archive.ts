@@ -5,7 +5,7 @@ export default function generate(site: Site) {
   return html`
     <!DOCTYPE html>
     <html>
-      ${head(site)}
+      ${head(site, 'All posts', 'Past blog posts', site.config.author, site.config.keywords)}
       <body class="f4 blue flx-body">
         ${nav(site)}
         <main clas="flx-main">

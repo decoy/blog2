@@ -3,7 +3,8 @@
   "title": "Typescript and Visual Studio",
   "date": "2014-01-18 20:26:35",
   "tags": ["typescript", "web"],
-  "blurb": ""
+  "blurb": "",
+  "description": "Exploring Typescript support in Microsoft Visual Studio"
 }
 ```
 

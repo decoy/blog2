@@ -4,6 +4,7 @@
   date: '2019-03-06 11:30:10',
   tags: ['agile'],
   blurb: `We recently interviewed [David Wood](https://twitter.com/davidgarywood) on our podcast [Getting Apps Done](https://gettingappsdone.com), and during the conversation David reframed "technical debt" as "technical credit".`,
+  description: "Reframing 'technical debt' as 'technical credit' for fun and profit.",
 });
 ```
 

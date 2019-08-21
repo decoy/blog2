@@ -1,15 +1,14 @@
 import { html, formatDate } from '../../lib/util';
 
-export function head(site: Site, page?: Post) {
-  const title = page && page.meta.title ? page.meta.title : site.config.title;
-  const description = page && page.meta.description ? page.meta.description : site.config.description;
+export function head(site: Site, title: string, description: string, author: string, keywords: string[]) {
   return html`
     <head>
       <meta lang="en" />
       <meta charset="utf-8" />
-      <meta name="author" content="${site.config.author}" />
+      <meta name="author" content="${author}" />
       <meta name="title" content="${title}" />
       <meta name="description" content="${description}" />
+      <meta name="keywords" content="${keywords.join(', ')}" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>
         ${title}

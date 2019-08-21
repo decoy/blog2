@@ -4,6 +4,7 @@ export const config: Config = {
   author: 'Kel Piffner',
   title: "Hi, I'm Kel",
   description: 'Developer of software, processes, and people.',
+  keywords: ['Seattle Web Development', 'Kellen Piffner'],
 
   root: '/',
   url: 'https://kellen.piffner.com/',

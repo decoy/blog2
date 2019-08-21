@@ -3,7 +3,8 @@
   "title": "Monty Hall Puzzle",
   "date": "2014-02-22 10:33:03",
   "tags": ["javascript", "web"],
-  "blurb": "Wikipedia has an excellent article on the “probability puzzle” know as the [Monty Hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem). \n It’s based around the concept of a game show where a contestant must pick one of three doors.  Behind one of the doors is the prize.  When the contestant picks the door, the host opens one of the other doors that doesn’t have the prize and then asks the contestant if they want to switch their choice.  The question: Do you switch or not?"
+  "blurb": "Wikipedia has an excellent article on the “probability puzzle” know as the [Monty Hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem). \n It’s based around the concept of a game show where a contestant must pick one of three doors.  Behind one of the doors is the prize.  When the contestant picks the door, the host opens one of the other doors that doesn’t have the prize and then asks the contestant if they want to switch their choice.  The question: Do you switch or not?",
+  "description": "Solving the Monty Hall problem with javascript!"
 }
 ```
 
