@@ -1,5 +1,6 @@
 import { promises } from 'fs';
 import * as Markdown from 'markdown-it';
+import * as footnotes from 'markdown-it-footnote';
 
 import * as vm from 'vm';
 import * as hljs from 'highlight.js';
@@ -21,7 +22,7 @@ const mdOptions = {
   },
 };
 
-const md = new Markdown(mdOptions);
+const md = new Markdown(mdOptions).use(footnotes);
 
 export async function loadMarkdownFile(path: string): Promise<Post> {
   const data = await promises.readFile(path, 'utf8');
