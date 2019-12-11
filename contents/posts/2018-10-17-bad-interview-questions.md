@@ -2,7 +2,7 @@
 ({
   title: 'Your interview questions are awful (but we can fix them)',
   date: '2018-10-17 10:17:16',
-  tags: ['interviewing', 'fear', 'skill'],
+  tags: ['interviewing', 'fear', 'skill', 'safety'],
   blurb: `The first time I was involved in a technical interview I was asked to present and grade a coding question: "What does this script do?" The candidate was then handed a print out of a (relatively) simple [VBScript](https://en.wikipedia.org/wiki/VBScript) that changed the computer name of a Windows PC.
 
 Only one candidate answered correctly. Every other candidate failed the question with an "I don't know."
@@ -52,7 +52,7 @@ Job interviews are scary. Unless they don't need the job, there's real risk invo
 
 An important part of an interviewer's job is to help them relax. You're not going to learn the full range of their skills if they're too nervous to answer your questions. The easiest way to help a candidate relax is to help remove their fear of failing. You can do this surprisingly simply: Ask them more questions that they're going to fail.
 
-It seems backwards, right? But the goal here isn't to catch them in a trap, but to show them that answering a question incorrectly is _safe_ to do. Dig into their wrong answers, see how they got there. Ask similar questions to see if they know related information. If they look nervous, tell them it's _ok_ to not know the answer.
+It seems backwards, right? But the goal here isn't to catch them in a trap, but to show them that answering a question incorrectly is [_safe_](/tags/safety) to do. Dig into their wrong answers, see how they got there. Ask similar questions to see if they know related information. If they look nervous, tell them it's _ok_ to not know the answer.
 
 > Some people think interviews should test for "handling stressful situations". Unless your business is in high stress situations (think: disaster relief operations), then this is bullshit. It's your job as an employer to provide a safe place to get work done.
 

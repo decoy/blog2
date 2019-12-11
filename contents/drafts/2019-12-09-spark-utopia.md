@@ -24,7 +24,7 @@ Now, try to imagine what happens next. Do they threaten you to get you to eat th
 
 Now imagine instead what if they offered you money? A hundred dollars (Or however much it would take for you to eat your most disliked food) incentive to eat the food. If you agree then, how would you feel?
 
-When you make a decision free of coercion, when you consent to it, it has a very different feeling. You take on responsibility for that action, you get it done because it's something you want to do.
+When you make a decision free of coercion, when you consent to it, it has a very different feeling. You take on responsibility for that action and you do it because it's something you want to do.
 
 ## Responsibility
 
@@ -46,6 +46,12 @@ Utopia is where nothing happens to you without your consent. That doesn't mean y
 
 This is impossible. The universe itself will fight you. But we can try anyway.
 
-## Giving up control
+To a large extent, that's the purpose of society. We learn all these rules in an attempt to get along so that we can move through life doing what we want. We setup laws and courts in an effort to force people to be responsible for their mistakes. We work together to find ways to push back against the universe.
+
+But what we have is not good enough. Utopia requires consent, and that includes consenting to being responsible for your own actions[^consentofthegov]. Basically, we have to agree on this one thing to move forward.
+
+[^consentofthegov]: Read more about [consent of the governed](https://en.wikipedia.org/wiki/Consent_of_the_governed).
+
+## Trust Giving Up Control
 
 ## What's next?
