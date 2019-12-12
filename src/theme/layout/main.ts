@@ -88,7 +88,7 @@ function podcast(site: Site) {
           <div class="section-content">
             <h1 class="section-title">Getting Apps Done</h1>
             <p>
-              <img src="img/microphone.svg" class="gad-icon" /> I cohost the
+              <img src="img/microphone.svg" class="gad-icon" alt="Getting Apps Done logo" /> I cohost the
               <a href="${site.config.podcast}" target="_blank">Getting Apps Done</a> podcast, with Joshua Graham, where
               we discuss subjects like interviewing, motivation, working remotely, learning to code, best practices, and
               what it means to be a software developer in today’s world.

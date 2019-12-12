@@ -16,9 +16,9 @@ export const config: Config = {
   podcast: 'https://gettingappsdone.com',
 
   latestPodcast: {
-    title: 'Feedback is the BEEP!',
-    date: '2019.08.08',
-    blurb: `Joshua and Kel chat about feedback: what it is, what it’s good for, how critical it is to growth and how it ties to safety and failure.`,
+    title: 'Give Good Feedback!',
+    date: '2019.12.05',
+    blurb: `We’ve talked about how important feedback is in the past, but how do you give good feedback? Joshua and Kel talk about how to give feedback people will appreciate and value.`,
   },
 
   pronouns: 'https://pronoun.is/they/.../themself',
