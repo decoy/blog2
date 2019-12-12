@@ -5,7 +5,7 @@ export default function generate(site: Site, tag: string) {
   const posts = site.posts.filter((p) => p.meta.tags.includes(tag));
   return html`
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       ${head(site, `All posts for tag: ${tag}`, `Read thoughts about ${tag}`, site.config.author, [tag])}
       <body class="f4 orange flx-body">
         ${nav(site)}

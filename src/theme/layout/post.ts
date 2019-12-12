@@ -6,7 +6,7 @@ export default function generate(site: Site, post: Post) {
   const author = post.meta.author ? post.meta.author : site.config.author;
   return html`
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       ${head(site, post.meta.title, post.meta.description, author, post.meta.tags)}
       <body class="f4 orange">
         ${nav(site)}

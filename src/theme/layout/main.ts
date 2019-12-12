@@ -89,11 +89,13 @@ function podcast(site: Site) {
             <h1 class="section-title">Getting Apps Done</h1>
             <p>
               <img src="img/microphone.svg" class="gad-icon" alt="Getting Apps Done logo" /> I cohost the
-              <a href="${site.config.podcast}" target="_blank">Getting Apps Done</a> podcast, with Joshua Graham, where
-              we discuss subjects like interviewing, motivation, working remotely, learning to code, best practices, and
-              what it means to be a software developer in today’s world.
+              <a href="${site.config.podcast}" target="_blank" rel="noopener">Getting Apps Done</a> podcast, with Joshua
+              Graham, where we discuss subjects like interviewing, motivation, working remotely, learning to code, best
+              practices, and what it means to be a software developer in today’s world.
             </p>
-            <p>Check out our <a href="${site.config.podcast}/slack" target="_blank">Slack community</a>!</p>
+            <p>
+              Check out our <a href="${site.config.podcast}/slack" target="_blank" rel="noopener">Slack community</a>!
+            </p>
           </div>
         </section>
         <section id="podcast-latest" class="col col-1-2">
@@ -106,7 +108,9 @@ function podcast(site: Site) {
               </header>
               <p>${site.config.latestPodcast.blurb}</p>
               <footer>
-                <div class="section-link"><a href="${site.config.podcast}" target="_blank">Listen now</a></div>
+                <div class="section-link">
+                  <a href="${site.config.podcast}" target="_blank" rel="noopener">Listen now</a>
+                </div>
               </footer>
             </article>
           </div>
@@ -127,13 +131,19 @@ function footer(site: Site) {
               If any of this sounds interesting to you or your organization, or if you’d just like to chat about the
               latest buzzwords, send me a message!
             </p>
-            <p>P.S. I use <a target="_blank" href="${site.config.pronouns}">they/them pronouns</a> :)</p>
+            <p>P.S. I use <a target="_blank" rel="noopener" href="${site.config.pronouns}">they/them pronouns</a> :)</p>
             <form action="https://formspree.io/contact@piffner.com" method="POST">
-              <input type="text" name="name" required placeholder="Name *" />
-              <input type="text" name="pronouns" required placeholder="Pronouns" />
-              <input type="email" name="email" required placeholder="Email Address *" />
-              <input type="text" name="phone" placeholder="Phone Number" />
-              <textarea name="phone" required placeholder="Message *"></textarea>
+              <input type="text" name="name" required placeholder="Name *" aria-label="Your name (required)" />
+              <input type="text" name="pronouns" placeholder="Pronouns" aria-label="Your pronouns (optional)" />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address *"
+                aria-label="Your email address (required)"
+              />
+              <input type="text" name="phone" placeholder="Phone Number" aria-label="Your phone number (optional)" />
+              <textarea name="phone" required placeholder="Message *" aria-label="Your message (required)"></textarea>
               <div class="controls">
                 <button type="submit">Send Message</button>
               </div>
@@ -156,7 +166,7 @@ function footer(site: Site) {
 export default function generate(site: Site) {
   return html`
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       ${head(site, site.config.title, site.config.description, site.config.author, site.config.keywords)}
       <body class="f4 blue">
         ${nav(site)}

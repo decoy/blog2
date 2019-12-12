@@ -99,31 +99,31 @@ export function tag(site: Site, tag: string, count: number) {
 export function social(site: Site) {
   return html`
     <span class="social-link">
-      <a title="Twitter" target="_blank" href="${site.config.twitter}">
+      <a title="Twitter" target="_blank" rel="noopener" href="${site.config.twitter}">
         <span class="social-icon">${socialIcons.twitter}</span>
         <span class="social-title">Twitter</span>
       </a>
     </span>
     <span class="social-link">
-      <a title="GitHub" target="_blank" href="${site.config.github}">
+      <a title="GitHub" target="_blank" rel="noopener" href="${site.config.github}">
         <span class="social-icon">${socialIcons.github}</span>
         <span class="social-title">Github</span>
       </a>
     </span>
     <span class="social-link">
-      <a title="LinkedIn" target="_blank" href="${site.config.linkedin}">
+      <a title="LinkedIn" target="_blank" rel="noopener" href="${site.config.linkedin}">
         <span class="social-icon">${socialIcons.linkedin}</span>
         <span class="social-title">LinkedIn</span>
       </a>
     </span>
     <span class="social-link">
-      <a title="Podcast" target="_blank" href="${site.config.podcast}">
+      <a title="Podcast" target="_blank" rel="noopener" href="${site.config.podcast}">
         <span class="social-icon">${socialIcons.podcast}</span>
         <span class="social-title">Podcast</span>
       </a>
     </span>
     <span class="social-link">
-      <a title="RSS" target="_blank" href="${site.config.root + site.config.rss}">
+      <a title="RSS" target="_blank" rel="noopener" href="${site.config.root + site.config.rss}">
         <span class="social-icon">${socialIcons.rss}</span>
         <span class="social-title">Feed</span>
       </a>

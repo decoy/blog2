@@ -8,11 +8,11 @@ All the markup is generated using template strings.
 
 `npm run start` To start the watch and and live server.
 
-`npm run publish` To publish any files modified to the actual site.  (Note: Publish doesn't run the various builds)
+`npm run publish` To publish any files modified to the actual site.
 
 ## Posts
 
-Posts are written in markdown.  Front matter is created using code blocks of type js or json.
+Posts are written in markdown. Front matter is created using code blocks of type js or json.
 
 ## Static files
 

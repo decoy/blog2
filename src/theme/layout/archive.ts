@@ -4,7 +4,7 @@ import { head, nav, articleMini, footer } from './partials';
 export default function generate(site: Site) {
   return html`
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
       ${head(site, 'All posts', 'Past blog posts', site.config.author, site.config.keywords)}
       <body class="f4 blue flx-body">
         ${nav(site)}
