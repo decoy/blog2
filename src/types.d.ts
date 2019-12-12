@@ -42,5 +42,6 @@ interface Config {
 
   outputDir: string;
   postFiles: string;
+  draftFiles: string;
   staticFiles: string;
 }

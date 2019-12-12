@@ -25,6 +25,7 @@ export const config: Config = {
 
   outputDir: './dist/',
   postFiles: './contents/posts/',
+  draftFiles: './contents/drafts/',
   staticFiles: './contents/static/',
 };
 
