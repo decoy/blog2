@@ -6,9 +6,9 @@ All the markup is generated using template strings.
 
 ## Quick Start
 
-`npm run start` To start the watch and and live server.
+`npm run start` Start the typescript and scss watchers and live-server.
 
-`npm run publish` To publish any files modified to the actual site.
+`npm run publish` Build and publish any files modified to the actual site.
 
 ## Posts
 
