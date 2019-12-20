@@ -3,8 +3,10 @@
   title: 'Safety and Confidence',
   date: '2019-09-11 10:00:00',
   tags: ['fear', 'safety', 'confidence', 'responsibility', 'trust', 'consent', 'agile'],
-  blurb: ``,
-  description: ``,
+  blurb: `As employers we want confident employees. We want people who can get things done with as little supervision as possible. We want to give them money and in exchange they give us value from their effort.
+
+And yet, that's not what usually happens. People require a lot of supervision, they aren't motivated. So why not? Why _aren't_ all your employees rock stars?`,
+  description: `Help your employees all be rockstars by increasing safety!`,
 });
 ```
 
@@ -14,9 +16,9 @@ And yet, that's not what usually happens. People require a lot of supervision, t
 
 ## Fear
 
-As always, it starts with fear. What are your employees afraid of?
+It starts with fear. What are your employees afraid of?
 
-Let's start with an example: Imagine a meeting, someone speaks up and says something ignorant. They don't fully understand the implications of what was going on, say something, and look foolish. At _best_, people will laugh, shaming them. At worst, someone might yell at them. It could result in them getting a bad review. It could result in them getting fired.
+Here's an example: Imagine a meeting, someone speaks up and says something ignorant. They don't fully understand the implications of what was going on, say something, and look foolish. At _best_, people will laugh, shaming them. At worst, someone might yell at them. It could result in them getting a bad review. It could result in them getting fired.
 
 We decide whether risks are "worth it" by weighing the possible rewards against the possible consequences. Your employees are weighing getting the job done against the possibility of getting fired. If they take the "safe" path, and stay quiet, they'll get the job done slower, and run less risk of getting fired. If they're _less efficient_, they're safer.
 
@@ -44,9 +46,11 @@ When you discuss risks with your team, ask them questions until you understand t
 
 This is where a lot of organizations break down. Consent to responsibility has to be voluntary, because otherwise it's not consent! If you threaten them you're not trusting them, you're forcing them, you're coercing them.
 
+Being responsible for your own actions, for many people, is just always assumed, but the first example in this article points out that sticking your head out can impact your own safety, your family's. Responsibility for something is always a gamble. We can't perfectly predict the future. If taking on that responsibility is required by your team, ask them what it would take for them to agree to it. Support them with safety.
+
 Let's go back to that timeline example. You ask the team how long it will take and they say 10 weeks. You list out the possible failure points, and make plans for the most likely, or the ones with the most impactful consequences. And then you do it. And if it goes great or it bombs, responsibility is what people agreed to. Everyone will make mistakes and instead of trying to bury or hide from them, they'll learn from them.
 
-Learning from your mistakes is the road to confidence. The more you know you can safely handle the more confident you are in your own ability. By creating an environment that's safe, people can learn that confidence by making mistakes over and over again, and if they're responsible for _their own actions_, then they'll have pressure to avoid that as much as possible. They can make decisions based on actual risk instead of "risk of getting yelled at by the boss".
+Learning from your mistakes is the road to confidence. The more you know you can safely handle the more confident you are in your own ability. By creating an environment that's safe, people can learn that confidence by making mistakes over and over again, and if they're responsible for their own actions, then they'll have pressure to avoid that as much as possible. They can make decisions based on actual risk instead of "risk of getting yelled at by the boss".
 
 ## Do the Impossible
 
@@ -55,3 +59,5 @@ Having a perfectly safe environment is impossible, but what you can do is lower 
 You can create an environment of trust, where you as an employer trust your employees to succeed _and_ fail. When you let people fail and pull themselves back up again, you teach them confidence in their own abilities.
 
 Help them all be rock stars.
+
+-Kel
