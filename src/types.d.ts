@@ -33,6 +33,9 @@ interface Config {
   url: string;
   rss: string;
 
+  image: string;
+  imageAlt: string;
+
   twitter: string;
   twitterNick: string;
   github: string;

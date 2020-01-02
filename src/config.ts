@@ -10,6 +10,9 @@ export const config: Config = {
   url: 'https://kellen.piffner.com/',
   rss: 'atom.xml',
 
+  image: 'https://kellen.piffner.com/img/gad.png',
+  imageAlt: 'Getting Apps Done Logo: Microphone with a checkmark.',
+
   twitterNick: '@KellenPiffner',
   twitter: 'https://twitter.com/@KellenPiffner',
   github: 'https://github.com/decoy',
