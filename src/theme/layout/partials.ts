@@ -17,7 +17,7 @@ export function head(
       <meta name="title" content="${title}" />
       <meta name="description" content="${description}" />
       <meta name="keywords" content="${keywords.join(', ')}" />
-      <meta name="twitter:card" content="${description}" />
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="${site.config.twitterNick}" />
       <meta property="og:url" content="${url ? url : site.config.url}" />
       <meta property="og:title" content="${title}" />
