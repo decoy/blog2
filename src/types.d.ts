@@ -34,6 +34,7 @@ interface Config {
   rss: string;
 
   twitter: string;
+  twitterNick: string;
   github: string;
   linkedin: string;
   podcast: string;

@@ -1,6 +1,14 @@
 import { html, formatDate } from '../../lib/util';
 
-export function head(site: Site, title: string, description: string, author: string, keywords: string[]) {
+export function head(
+  site: Site,
+  title: string,
+  description: string,
+  author: string,
+  keywords: string[],
+  url?: string,
+  image?: string
+) {
   return html`
     <head>
       <meta lang="en" />
@@ -9,10 +17,14 @@ export function head(site: Site, title: string, description: string, author: str
       <meta name="title" content="${title}" />
       <meta name="description" content="${description}" />
       <meta name="keywords" content="${keywords.join(', ')}" />
+      <meta name="twitter:card" content="${description}" />
+      <meta name="twitter:creator" content="${site.config.twitterNick}" />
+      <meta property="og:url" content="${url ? url : site.config.url}" />
+      <meta property="og:title" content="${title}" />
+      <meta property="og:description" content="${description}" />
+      <!-- <meta property="og:image" content="${image}" /> -->
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>
-        ${title}
-      </title>
+      <title>${title}</title>
       <link
         rel="alternative"
         href="${site.config.root + site.config.rss}"
@@ -23,6 +35,10 @@ export function head(site: Site, title: string, description: string, author: str
       <link rel="stylesheet" href="${site.config.root}index.css" type="text/css" />
     </head>
   `;
+}
+
+export function meta(site: Site, description: string, url: string, title: string, image: string) {
+  return html``;
 }
 
 export function nav(site: Site, page?: Post) {
@@ -89,8 +105,12 @@ export function footer(site: Site) {
   `;
 }
 
+export function createTagLink(site: Site, tag: string) {
+  return 'tags/' + tag.toLowerCase() + '/';
+}
+
 export function tag(site: Site, tag: string, count: number) {
-  const link = site.config.root + 'tags/' + tag.toLowerCase() + '/';
+  const link = site.config.root + createTagLink(site, tag);
   return html`
     <a href="${link}" class="tag">${tag}</a>
   `;

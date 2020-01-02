@@ -10,6 +10,7 @@ export const config: Config = {
   url: 'https://kellen.piffner.com/',
   rss: 'atom.xml',
 
+  twitterNick: '@KellenPiffner',
   twitter: 'https://twitter.com/@KellenPiffner',
   github: 'https://github.com/decoy',
   linkedin: 'https://www.linkedin.com/in/kellenpiffner',
