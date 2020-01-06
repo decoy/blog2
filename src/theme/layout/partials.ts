@@ -1,6 +1,15 @@
 import { html, formatDate } from '../../lib/util';
 
-export function head(site: Site, title: string, description: string, author: string, keywords: string[], url?: string) {
+export function head(
+  site: Site,
+  title: string,
+  description: string,
+  author: string,
+  keywords: string[],
+  url?: string,
+  image?: string,
+  imageAlt?: string
+) {
   return html`
     <head>
       <meta lang="en" />
@@ -14,8 +23,8 @@ export function head(site: Site, title: string, description: string, author: str
       <meta property="og:url" content="${url ? url : site.config.url}" />
       <meta property="og:title" content="${title}" />
       <meta property="og:description" content="${description}" />
-      <meta property="og:image" content="${site.config.image}" />
-      <meta property="og:image:alt" content="${site.config.imageAlt}" />
+      <meta property="og:image" content="${image ? image : site.config.image}" />
+      <meta property="og:image:alt" content="${imageAlt ? imageAlt : site.config.imageAlt}" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>${title}</title>
       <link

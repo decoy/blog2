@@ -2,6 +2,8 @@
 ({
   title: 'Safety and Confidence',
   date: '2020-01-01 10:00:00',
+  image: 'img/confused.jpg',
+  imageAlt: 'Person with bag over their head shrugging and confused while sitting at a computer.',
   tags: ['fear', 'safety', 'confidence', 'responsibility', 'trust', 'consent', 'agile'],
   blurb: `As employers we want confident employees. We want people who can get things done with as little supervision as possible. We want to give them money and in exchange they give us value from their effort.
 

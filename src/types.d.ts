@@ -6,6 +6,8 @@ interface PostMeta {
   description: string;
   blurb: string;
   tags: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 interface Post {

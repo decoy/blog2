@@ -7,7 +7,16 @@ export default function generate(site: Site, post: Post) {
   return html`
     <!DOCTYPE html>
     <html lang="en">
-      ${head(site, post.meta.title, post.meta.description, author, post.meta.tags, site.config.url + post.link)}
+      ${head(
+        site,
+        post.meta.title,
+        post.meta.description,
+        author,
+        post.meta.tags,
+        site.config.url + post.link,
+        site.config.url + post.meta.image,
+        post.meta.imageAlt
+      )}
       <body class="f4 orange">
         ${nav(site)}
         <article class="container post-section-content">
